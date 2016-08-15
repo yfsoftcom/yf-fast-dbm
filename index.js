@@ -1,7 +1,6 @@
 var Schema = require('jugglingdb').Schema;
 var _ = require('underscore');
 var fastDBM = require('./lib/fastDBM.js');
-//…Ë÷√db¡¥Ω”
 module.exports = function(option){
     var option = _.extend({
         host:'localhost',
@@ -10,6 +9,7 @@ module.exports = function(option){
         username:'root',
         password:'',
         debug:false,
+        showSql:false,
         pool:{
             connectionLimit:10,
             queueLimit:0,
@@ -17,5 +17,5 @@ module.exports = function(option){
         }
     },option);
     var schema = new Schema('mysql', option);
-    return fastDBM(schema.adapter);
+    return fastDBM(schema.adapter,option);
 };
