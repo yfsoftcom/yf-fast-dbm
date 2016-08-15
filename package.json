@@ -1,6 +1,6 @@
 {
   "name": "yf-fast-dbm",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "fast sql generateor",
   "main": "index.js",
   "scripts": {
