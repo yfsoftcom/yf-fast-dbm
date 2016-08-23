@@ -13,25 +13,25 @@
 $ npm install yf-fast-dbm
 `
 ### 2.API List
-* #### adapter
+* adapter
 *获取原生的数据库适配器，可执行自定义的sql来满足一些复杂的业务操作*
-* #### find
+* find
 *通过一组查询、排序、分页的条件筛选一组数据结果。*
-* #### first
+* first
 *通过一组查询、排序、分页的条件筛选一行数据结果。*
-* #### count
+* count
 *通过筛选条件进行统计计数*
-* #### findAndCount
+* findAndCount
 *通过一组查询、排序、分页的条件筛选一组数据结果，并返回符合条件的所有数据行数*
-* #### get
+* get
 *通过数据的ID获取到唯一的数据*
-* #### update
+* update
 *修改一些数据*
-* #### remove
+* remove
 *删除一条已知的数据*
-* #### clear
+* clear
 *通过筛选条件删除一组数据*
-* #### create
+* create
 *添加一条或者多条数据*
 
 ### 3.Configuration
