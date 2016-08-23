@@ -31,6 +31,8 @@ $ npm install yf-fast-dbm
 *删除一条已知的数据*
 * #### clear
 *通过筛选条件删除一组数据*
+* #### create
+*添加一条或者多条数据*
 
 ##### 3.Configuration
 模块自带的一些配置信息：
@@ -185,6 +187,35 @@ var arg = {
 　condition: "delflag=0"
 };
 M.clear(arg).then(function (data) {
+　// do success here
+}).catch(function (err) {
+　// do error here
+});
+```
+
+###### create
+* Code List 11:
+```
+// M 的初始化代码请参看 Code List:2
+var arg = {
+　table: "test",
+　row: {key:"test",val:"mmm"}
+};
+M.create(arg).then(function (data) {
+　// do success here
+}).catch(function (err) {
+　// do error here
+});
+```
+or  batch insert
+* Code List 12:
+```
+// M 的初始化代码请参看 Code List:2
+var arg = {
+　table: "test",
+　row:[{key:"test",val:"mmm"},{key:"test2",val:"mmm2"}]
+};
+M.create(arg).then(function (data) {
 　// do success here
 }).catch(function (err) {
 　// do error here
