@@ -1,4 +1,4 @@
-#### yf-fast-dbm
+## yf-fast-dbm
 > 快速极简的orm框架
 
 * 源码地址: [https://github.com/yfsoftcom/yf-fast-dbm](https://github.com/yfsoftcom/yf-fast-dbm)
@@ -8,11 +8,11 @@
 * 支持批量插入
 * TODO:事务，存储过程，mongodb语法
 
-##### 1.Installation
+### 1.Installation
 `
 $ npm install yf-fast-dbm
 `
-##### 2.API List
+### 2.API List
 * #### adapter
 *获取原生的数据库适配器，可执行自定义的sql来满足一些复杂的业务操作*
 * #### find
@@ -34,7 +34,7 @@ $ npm install yf-fast-dbm
 * #### create
 *添加一条或者多条数据*
 
-##### 3.Configuration
+### 3.Configuration
 模块自带的一些配置信息：
 * Code List 1:
 ```
@@ -66,9 +66,9 @@ var C = {
 var M = require('yf-fast-dbm')(C);
 ```
 
-##### 4.Useage
+### 4.Useage
 
-###### find
+##### find
 * Code List 3:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -84,7 +84,7 @@ M.find(arg).then(function (data) {
 });
 ```
 
-###### first
+##### first
 * Code List 4:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -100,7 +100,7 @@ M.first(arg).then(function (data) {
 });
 ```
 
-###### count
+##### count
 * Code List 5:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -115,7 +115,7 @@ M.count(arg).then(function (c) {
 });
 ```
 
-###### findAndCount
+##### findAndCount
 * Code List 6:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -131,7 +131,7 @@ M.first(arg).then(function (data) {
 });
 ```
 
-###### get
+##### get
 * Code List 7:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -146,7 +146,7 @@ M.get(arg).then(function (data) {
 });
 ```
 
-###### update
+##### update
 * Code List 8:
 修改所有key为test的val为123
 ```
@@ -163,7 +163,7 @@ M.update(arg).then(function (data) {
 });
 ```
 
-###### remove
+##### remove
 * Code List 9:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -178,7 +178,7 @@ M.remove(arg).then(function (data) {
 });
 ```
 
-###### clear
+##### clear
 * Code List 10:
 ```
 // M 的初始化代码请参看 Code List:2
@@ -193,7 +193,7 @@ M.clear(arg).then(function (data) {
 });
 ```
 
-###### create
+##### create
 * Code List 11:
 ```
 // M 的初始化代码请参看 Code List:2
