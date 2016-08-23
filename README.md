@@ -117,6 +117,19 @@ M.first(arg).then(function (data) {
 }).catch(function (err) {
 　// do error here
 });
+//condition 字段接受各种格式
+//比如下面的格式同样支持
+var arg = {
+    table: "api_app",
+    condition: [
+      ['appid' , '=' , '10001'],
+      "appkey = '45883198abcdc109'",
+      ['or',['appname' ,'=','DEV_Activity']]
+    ],
+    fields: "id,appid,appname,apptype"
+};
+//最终解析出来的语句是这样的：
+// where ( 1 = 1  and appid='10001' and appkey = '45883198abcdc109' or appname='DEV_Activity') and delflag = 0
 ```
 
 ##### count
