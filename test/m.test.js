@@ -1,9 +1,10 @@
 var expect = require('chai').expect;
 var C = {
     host:'192.168.1.218',
-    database:'gr_ec',
+    database:'gr_api',
     username:'dbadmin',
     password:'87252798',
+    showSql:true
 };
 var M = require('../index.js')(C);
 describe('Fast DB M', function() {
@@ -21,9 +22,25 @@ describe('Fast DB M', function() {
     describe('#FDM()', function () {
         it('#First', function (done) {
             var arg = {
-                table: "gr_exploration",
+                table: "api_app",
                 condition: "delflag=0",
-                fields: "id,article,ptags,product"
+                fields: "*"
+            };
+            M.first(arg).then(function (data) {
+                done();
+            }).catch(function (err) {
+                done(err);
+            });
+        });
+        it('#First Object Condition', function (done) {
+            var arg = {
+                table: "api_app",
+                condition: [
+                  ['appid' , '=' , '10001'],
+                  "appkey = '45883198abcdc109'",
+                  ['or',['appname' ,'=','DEV_Activity']]
+                ],
+                fields: "id,appid,appname,apptype"
             };
             M.first(arg).then(function (data) {
                 done();
