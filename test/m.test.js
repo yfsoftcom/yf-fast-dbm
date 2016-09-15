@@ -1,9 +1,9 @@
 var expect = require('chai').expect;
 var C = {
-    host:'192.168.1.218',
-    database:'gr_api',
+    host:'localhost',
+    database:'yf-fast-platform',
     username:'dbadmin',
-    password:'87252798',
+    password:'741235896',
     showSql:true
 };
 var M = require('../index.js')(C);
@@ -48,6 +48,20 @@ describe('Fast DB M', function() {
                 done(err);
             });
         });
+        it('#findAndCount', function (done) {
+            var arg = {
+                table: "api_app",
+                condition: "delflag=0",
+                fields: "*"
+            };
+            M.findAndCount(arg).then(function (data) {
+              console.log(data.rows[0].appkey);
+                done();
+            }).catch(function (err) {
+                done(err);
+            });
+        });
+
     });
 
 });

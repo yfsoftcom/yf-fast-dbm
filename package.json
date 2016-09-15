@@ -1,6 +1,6 @@
 {
   "name": "yf-fast-dbm",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "fast sql generateor",
   "main": "index.js",
   "scripts": {
@@ -12,14 +12,12 @@
   "author": "yfdever",
   "license": "MIT",
   "devDependencies": {
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   },
   "dependencies": {
-    "async": "^2.0.0-rc.6",
-    "jugglingdb": "^2.0.0-rc4",
-    "jugglingdb-mysql": "^0.2.3",
+    "lodash": "^4.15.0",
     "mysql": "^2.11.1",
-    "q": "^1.4.1",
-    "underscore": "^1.8.3"
+    "q": "^1.4.1"
   }
 }

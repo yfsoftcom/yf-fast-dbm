@@ -56,12 +56,12 @@ $ npm install yf-fast-dbm
 ### 3.Configuration
 模块自带的一些配置信息：
 * Code List 1:
-```
+```javascript
 {
     host:'localhost',           //mysql host
     port:3306,                  //mysql port
     database:'test',            //mysql dbname
-    username:'root',            //mysql username
+    user:'root',            //mysql username
     password:'',                //mysql password
     debug:false,                //true：输出jugglingdb生成的sql语句
     showSql:false,              //true：输出本模块生成的sql语句
@@ -75,7 +75,7 @@ $ npm install yf-fast-dbm
 
 在初始化的时候，可以通过传入的参数覆盖这些默认值
 * Code List 2:
-```
+```javascript
 var C = {
     host:'192.168.1.1',
     database:'test',
@@ -89,7 +89,7 @@ var M = require('yf-fast-dbm')(C);
 
 ##### find
 * Code List 3:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -105,7 +105,7 @@ M.find(arg).then(function (data) {
 
 ##### first
 * Code List 4:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -134,7 +134,7 @@ var arg = {
 
 ##### count
 * Code List 5:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -149,7 +149,7 @@ M.count(arg).then(function (c) {
 
 ##### findAndCount
 * Code List 6:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -165,7 +165,7 @@ M.first(arg).then(function (data) {
 
 ##### get
 * Code List 7:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -181,7 +181,7 @@ M.get(arg).then(function (data) {
 ##### update
 * Code List 8:
 修改所有key为test的val为123
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -197,7 +197,7 @@ M.update(arg).then(function (data) {
 
 ##### remove
 * Code List 9:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -212,7 +212,7 @@ M.remove(arg).then(function (data) {
 
 ##### clear
 * Code List 10:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -227,7 +227,7 @@ M.clear(arg).then(function (data) {
 
 ##### create
 * Code List 11:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
@@ -241,7 +241,7 @@ M.create(arg).then(function (data) {
 ```
 or  batch insert
 * Code List 12:
-```
+```javascript
 // M 的初始化代码请参看 Code List:2
 var arg = {
 　table: "test",
