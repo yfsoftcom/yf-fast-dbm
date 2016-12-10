@@ -2,7 +2,7 @@
 > 快速极简的orm框架
 
 * 源码地址: [https://github.com/yfsoftcom/yf-fast-dbm](https://github.com/yfsoftcom/yf-fast-dbm)
-* 目前支持mysql，使用 jugglingdb
+* 目前支持mysql
 * 通过delflag实现逻辑删除
 * 默认带有四个字段：id,createAt,updateAt,delflag
 * 支持批量插入
