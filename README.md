@@ -1,3 +1,8 @@
+# Tips:
+* 该组件已更换了git地址：[https://github.com/team4yf/yf-fpm-dbm](https://github.com/team4yf/yf-fpm-dbm)
+* 2017年之后的更新代码不会在此更新 
+* 新代码支持事务等更多特性，谢谢您的支持
+
 ## yf-fast-dbm
 > 快速极简的orm框架
 
